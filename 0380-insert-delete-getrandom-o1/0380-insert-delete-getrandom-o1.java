@@ -1,3 +1,4 @@
+// 95ms, 85.6mb
 import java.util.Set;
 import java.util.HashSet;
 
@@ -19,12 +20,10 @@ class RandomizedSet {
     
     public int getRandom() {
         int rand = (int)(Math.random() * set.size());
-        int num = -1;
         Iterator<Integer> itor = set.iterator();
-        for(int i=0; i<=rand; i++)
-            num = itor.next();
-
-        return num;
+        for(int i=0; i<rand; i++)
+            itor.next();
+        return itor.next();
     }
 }
 
