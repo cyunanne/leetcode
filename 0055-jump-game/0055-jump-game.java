@@ -1,6 +1,6 @@
 class Solution {
     
-    // 798ms, 44.4mb
+    // 89ms, 44.4mb
     public boolean canJump(int[] nums) {
         boolean[] reachable = new boolean[nums.length];
         reachable[nums.length-1] = true;
@@ -12,7 +12,6 @@ class Solution {
                     reachable[i] = true;
                     break;
                 }
-                if(j == 0) reachable[i] = false;
             }
         }
         
